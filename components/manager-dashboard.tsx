@@ -61,9 +61,9 @@ export function ManagerDashboard({ userRoles }: ManagerDashboardProps) {
       </div>
 
       {/* Updated Grid Section */}
-      <div className="grid grid-cols-18 gap-7">
+      <div className="grid grid-cols-12 gap-6">
         {/* Recent Activity (8 cols) */}
-        <div className="col-span-10 w-200">
+        <div className="col-span-8">
           <div className="flex items-center gap-2 mb-4">
             <TrendingUp className="w-5 h-5 text-gray-600" />
             <h3 className="text-lg font-semibold text-gray-800">Recent Activity</h3>
@@ -113,7 +113,7 @@ export function ManagerDashboard({ userRoles }: ManagerDashboardProps) {
         </div>
 
         {/* Team Status (4 cols) */}
-        <Card className="col-span-4 border-slate-200 w-160">
+        <Card className="col-span-4 border-slate-200">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg font-semibold flex items-center gap-2 text-slate-800">

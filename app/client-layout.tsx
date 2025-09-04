@@ -167,9 +167,9 @@ export default function ClientLayout({
             isDarkMode={isDarkMode} 
           />
  
-          <main className={`flex-1 pt-16 transition-all duration-300 ${sidebarOpen ? "lg:ml-64" : ""}`}>
-            <div className="min-h-full flex flex-col">
-              {React.cloneElement(children as React.ReactElement)}
+          <main className={`flex-1 pt-16 transition-all duration-300 ${sidebarOpen ? "lg:ml-64" : ""} overflow-x-hidden`}>
+            <div className="min-h-full flex flex-col w-full max-w-full">
+              {React.cloneElement(children as React.ReactElement, { sidebarOpen })}
             </div>
           </main>
  

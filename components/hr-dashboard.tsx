@@ -54,8 +54,8 @@ export function HRDashboard({ userRoles }: HRDashboardProps) {
         </div>
       </div>
 
-      <div className="grid grid-cols-18 gap-7">
-        <div className="col-span-10 w-170">
+      <div className="grid grid-cols-12 gap-6">
+        <div className="col-span-8">
           {/* Office Attendance Overview */}
           <Card className="border-slate-200 shadow-sm h-full">
             <CardHeader className="pb-3">
@@ -94,7 +94,7 @@ export function HRDashboard({ userRoles }: HRDashboardProps) {
         </div>
 
         {/* Recent Activity - Full width */}
-        <div className="col-span-4 border-slate-200 w-140">
+        <div className="col-span-4 border-slate-200">
           <div className="flex items-center gap-2 mb-4">
             <TrendingUp className="w-5 h-5 text-gray-600" />
             <h3 className="text-lg font-semibold text-gray-800">Recent Activity</h3>
