@@ -1,9 +1,10 @@
 import { AssignApproverPage } from "@/components/src/assign-approver"
 
 interface AssignApproverProps {
-  isDarkMode: boolean
+  isDarkMode?: boolean
+  sidebarOpen?: boolean
 }
 
-export default function AssignApprover({ isDarkMode }: AssignApproverProps) {
-  return <AssignApproverPage isDarkMode={isDarkMode} />
+export default function AssignApprover({ isDarkMode, sidebarOpen }: AssignApproverProps) {
+  return <AssignApproverPage isDarkMode={isDarkMode} sidebarOpen={sidebarOpen} />
 }
