@@ -139,8 +139,8 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                   <h4 className={`font-medium ${isDarkMode ? "text-white" : "text-gray-800"}`}>Entry {index + 1}</h4>
                 </div>
 
-                <div className="grid grid-cols-12 gap-6">
-                  <div className="col-span-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4">
+                  <div className="col-span-6 sm:col-span-7 lg:col-span-6">
                     <label className="block text-sm font-medium mb-1">Engagement</label>
                     <Select
                       value={entry.engagement}
@@ -159,7 +159,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                     </Select>
                   </div>
 
-                  <div className="col-span-2">
+                  <div className="col-span-8 sm:col-span-2 lg:col-span-6">
                     <label className="block text-sm font-medium mb-1">Task</label>
                     <Select value={entry.task} onValueChange={(value) => updateEntry(entry.id, "task", value)}>
                       <SelectTrigger>
@@ -175,7 +175,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                     </Select>
                   </div>
 
-                  <div className="col-span-1">
+                  <div className="col-span-3 sm:col-span-1 lg:col-span-2">
                     <label className="block text-sm font-medium mb-1">Hours</label>
                     <Input
                       type="number"
@@ -187,7 +187,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                     />
                   </div>
 
-                  <div className="col-span-1">
+                  <div className="col-span-3 sm:col-span-1 lg:col-span-2">
                     <label className="block text-sm font-medium mb-1">Minutes</label>
                     <Input
                       type="number"
@@ -199,7 +199,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                     />
                   </div>
 
-                  <div className="col-span-4">
+                  <div className="col-span-4 sm:col-span-2 lg:col-span-6">
                     <label className="block text-sm font-medium mb-1">Comments</label>
                     <Textarea
                       placeholder="Add comments..."
@@ -209,7 +209,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
                     />
                   </div>
 
-                  <div className="col-span-1 flex items-end">
+                  <div className="col-span-1 sm:col-span-1 lg:col-span-1 flex items-end">
                     {entries.length > 1 && (
                       <Button
                         variant="ghost"
@@ -262,7 +262,7 @@ export function BulkEntryModal({ isOpen, onClose, onSubmit, isDarkMode }: BulkEn
           </div>
 
           {/* Actions */}
-          <div className="flex gap-2 pt-4 border-t">
+          <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
             <Button variant="outline" onClick={onClose} className="flex-1 bg-transparent">
               Cancel
             </Button>

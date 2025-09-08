@@ -9,7 +9,7 @@ interface PlaceholderPageProps {
 
 export function PlaceholderPage({ title, icon }: PlaceholderPageProps) {
   return (
-    <div className="space-y-6">
+    <div className="p-4 sm:p-6 space-y-6">
       <Card>
         <CardHeader className="border-b">
           <CardTitle className="text-2xl font-semibold text-gray-900 flex items-center gap-2">
