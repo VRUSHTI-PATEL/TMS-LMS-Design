@@ -123,7 +123,7 @@ import { Button } from '@/components/ui/button'
 import { Plus, Calendar, LayoutDashboard } from 'lucide-react'
  
 interface DashboardProps {
-   isDarkMode?: boolean
+  isDarkMode?: boolean
   sidebarOpen?: boolean
 }
  
@@ -134,8 +134,9 @@ const mockUsers = [
   { id: 3, name: 'Mike Wilson', roles: ['hr', 'employee'], title: 'HR Executive' },
   { id: 4, name: 'Emily Davis', roles: ['employee', 'manager', 'hr'], title: 'Department Head' },
 ]
- 
+
 export default function Dashboard({ isDarkMode, sidebarOpen }: DashboardProps)  {
+
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
   const [activeView, setActiveView] = useState('employee')
   const router = useRouter()

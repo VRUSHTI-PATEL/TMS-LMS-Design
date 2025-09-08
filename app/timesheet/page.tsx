@@ -6,5 +6,5 @@ interface TimesheetProps {
 }
 
 export default function Timesheet({ isDarkMode, sidebarOpen }: TimesheetProps) {
-  return <TimesheetPage sidebarOpen={sidebarOpen} />
+  return <TimesheetPage isDarkMode={isDarkMode} sidebarOpen={sidebarOpen} />
 }
