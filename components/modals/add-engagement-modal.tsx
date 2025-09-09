@@ -929,7 +929,7 @@ export function AddEngagementModal({
                   onKeyPress={(e) => e.key === "Enter" && handleAddTask()}
                   className="w-full sm:w-48"
                 />
-                <Button onClick={handleAddTask} size="sm">
+                <Button className="bg-blue-600 hover:bg-blue-700" onClick={handleAddTask} size="sm">
                   <Plus className="h-4 w-4 mr-1" /> Add Task
                 </Button>
               </div>
@@ -942,6 +942,7 @@ export function AddEngagementModal({
                 {filteredTasks.map((task) => (
                   <div key={task} className="flex items-center space-x-2">
                     <Checkbox
+                      className="border-gray-300 dark:border-gray-600 data-[state=checked]:bg-white-600 data-[state=checked]:text-black"
                       id={task}
                       checked={formData.selectedTasks.includes(task)}
                       onCheckedChange={() => handleTaskToggle(task)}
@@ -964,10 +965,7 @@ export function AddEngagementModal({
  
         {/* Footer */}
         <div className="flex flex-col sm:flex-row justify-end gap-3 p-4 sm:p-6 border-t">
-          <Button variant="destructive" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button onClick={handleSave}>
+          <Button className="bg-green-600 hover:bg-green-700" onClick={handleSave}>
             <Save className="h-4 w-4 mr-2" />
             Save
           </Button>
