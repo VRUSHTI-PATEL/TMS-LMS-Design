@@ -45,7 +45,7 @@ export function EmployeeDashboard({ userRoles }: EmployeeDashboardProps) {
     if (currentLeave?.status === "completed") {
       return (
         <div className="flex items-center justify-between relative flex-wrap gap-4">
-          <div className="absolute top-4 left-8 right-8 h-0.5 bg-blue-500 hidden md:block"></div>
+          <div className="absolute top-4 left-8 right-8 h-0.5 bg-blue-500"></div>
           {["Submitted", "Manager Approval", "HR Approval", "Approved"].map((stage, idx) => (
             <div key={idx} className="flex flex-col items-center relative z-10 flex-1">
               <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2">
@@ -59,7 +59,8 @@ export function EmployeeDashboard({ userRoles }: EmployeeDashboardProps) {
     } else if (currentLeave?.status === "submitted") {
       return (
         <div className="flex items-center justify-between relative flex-wrap gap-4">
-          <div className="absolute top-4 left-8 right-8 h-0.5 bg-gray-200 hidden md:block"></div>
+          <div className="absolute top-4 left-8 right-8 h-0.5 bg-gray-200"></div>
+          <div className="absolute top-4 left-8 w-1/4 h-0.5 bg-blue-500"></div>
           <div className="flex flex-col items-center relative z-10 flex-1">
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2">
               <CheckCircle className="w-4 h-4 text-blue-500" />
@@ -89,14 +90,15 @@ export function EmployeeDashboard({ userRoles }: EmployeeDashboardProps) {
     } else {
       return (
         <div className="flex items-center justify-between relative flex-wrap gap-4">
-          <div className="absolute top-4 left-8 right-8 h-0.5 bg-gray-200 hidden md:block"></div>
-          <div className="absolute top-4 left-8 w-1/3 h-0.5 bg-blue-500 hidden md:block"></div>
+          <div className="absolute top-4 left-8 right-8 h-0.5 bg-gray-200"></div>
+          <div className="absolute top-4 left-8 w-2/4 h-0.5 bg-blue-500"></div>
           <div className="flex flex-col items-center relative z-10 flex-1">
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2">
               <CheckCircle className="w-4 h-4 text-blue-500" />
             </div>
             <span className="text-sm font-medium text-blue-600">Submitted</span>
           </div>
+          <div className="absolute top-4 left-8 w-1/4 h-0.5 bg-blue-500"></div>
           <div className="flex flex-col items-center relative z-10 flex-1">
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mb-2">
               <CheckCircle className="w-4 h-4 text-blue-500" />
